@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { UserButton, SignedIn, SignedOut } from '@clerk/clerk-react';
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -94,12 +96,23 @@ export default function Header() {
 
 
             <div className="inline-flex items-center gap-2 list-none lg:ml-auto">
+              
+            <SignedIn>
               <a
+                className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-[#333] hover:text-black rounded-lg group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-slate-50 active:bg-slate-200 active:text-accent-400 focus-visible:outline-black"
+                href="/dashboard"
+                >
+                Dashboard
+              </a>
+              </SignedIn>
+            <SignedOut>
+            <a
                 className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-[#333] hover:text-black rounded-lg group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-slate-50 active:bg-slate-200 active:text-accent-400 focus-visible:outline-black"
                 href="/dashboard"
                 >
                 Sign in
               </a>
+            </SignedOut>
             </div>
           </nav>
         </div>

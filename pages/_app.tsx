@@ -5,6 +5,7 @@ import ErrorBoundary from "./ErrorBoundry";
 import React, { lazy } from 'react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { ClerkProvider } from "@clerk/nextjs";
 
 const Footer = lazy(() => import('../components/Footer'));
 
@@ -27,10 +28,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <>
+      <ClerkProvider {...pageProps}>
       <ErrorBoundary fallback="There was an error while processing">
       <Component {...pageProps} />
       {/* <Footer /> */}
       </ErrorBoundary>
+      </ClerkProvider>
     </>
   );
 }

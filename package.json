@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.21.15",
     "@headlessui/react": "^1.7.7",
     "@tensorflow/tfjs": "^3.21.0",
     "@upstash/ratelimit": "^0.1.5",
