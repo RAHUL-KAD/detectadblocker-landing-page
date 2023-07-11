@@ -13,12 +13,6 @@
 git clone
 ```
 
-### Creating a account on Replicate to get an API key.
-
-1. Go to [Replicate](https://replicate.com/) to make an account.
-2. Click on your profile picture in the top right corner, and click on "Dashboard".
-3. Click on "Account" in the navbar. And, here you can find your API token, copy it.
-
 
 ### Storing API key in .env file.
 
