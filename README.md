@@ -1,8 +1,6 @@
-# [imgai](https://imgai.netlify.app/)
+# [pixelmark](https://pixelmark.netlify.app/)
 
 
-
-[![Face Photo Restorer](./public/silueta.png)](https://imgai.netlify.app/)
 
 
 ## Running Locally

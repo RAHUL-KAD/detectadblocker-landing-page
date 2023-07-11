@@ -18,44 +18,68 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2">
       <Head>
-      <title>Tracker | All in one Tracking </title>
+      <title>pixelmark | All in one Tracking </title>
       <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
-      <main className="w-full grid sm:grid-cols-2 mt-10 gap-10 sm:ml-40 px-4 sm:mt-16">
-        
-        <div className='sm:mt-16 mt-10'>
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-16 mt-10">
           <img
-                src="https://tinypixel.pythonanywhere.com/pixel.gif?page=voxlab-landing-page"
+                src="https://tinypixel.pythonanywhere.com/pixel.gif?page=pixelmark-landing-page"
               style={{ width: '1px', height: '1px' }}
             />
-            <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-900 sm:text-5xl">
-              
+
+        <a
+          href="https://twitter.com/rahul_jalindar/status/1674156276920483840"
+          target="_blank"
+          rel="noreferrer"
+          className="mx-auto sm:mb-10 mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
+        >
+          <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 248 204"
+            className="h-5 w-5 text-[#1d9bf0]"
+          >
+            <path
+              fill="currentColor"
+              d="M221.95 51.29c.15 2.17.15 4.34.15 6.53 0 66.73-50.8 143.69-143.69 143.69v-.04c-27.44.04-54.31-7.82-77.41-22.64 3.99.48 8 .72 12.02.73 22.74.02 44.83-7.61 62.72-21.66-21.61-.41-40.56-14.5-47.18-35.07 7.57 1.46 15.37 1.16 22.8-.87-23.56-4.76-40.51-25.46-40.51-49.5v-.64c7.02 3.91 14.88 6.08 22.92 6.32C11.58 63.31 4.74 33.79 18.14 10.71c25.64 31.55 63.47 50.73 104.08 52.76-4.07-17.54 1.49-35.92 14.61-48.25 20.34-19.12 52.33-18.14 71.45 2.19 11.31-2.23 22.15-6.38 32.07-12.26-3.77 11.69-11.66 21.62-22.2 27.93 10.01-1.18 19.79-3.86 29-7.95-6.78 10.16-15.32 19.01-25.2 26.16z"
+            />
+          </svg>
+          </div>
+          <p className="text-sm font-semibold text-[#27a7fc]">
+            Introducing imgai
+          </p>
+        </a>
+
+          <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
+            
+          <span className="relative whitespace-nowrap text-[#333]">
+              <span className="relative mr-2">Tracke everything</span>
+            </span>
+            
+          </h1>
+
+          <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
+            
             <span className="relative whitespace-nowrap text-[#333]">
-                <span className="relative mr-2">Tracke everything</span>
+                <span className="relative mr-2">with a Pixel</span>
               </span>
               
             </h1>
 
-            <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#333] sm:text-5xl sm:mt-2">
-            with a pixel
-            </h1>
-
 
             <p className="mx-auto sm:mt-5 mt-5 max-w-xl text-lg text-[#333] leading-7">
-              Generate high quality datasets for Computer Vision, ASR, Virtual assistants, Chatbots, and content creation.
-            </p>
+             With one pixel you can track anything.
+             </p>
 
             <div className="flex space-x-4">
               
               <Link
                 className="items-center mt-7 justify-center font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-[#333] border-2 duration-200 focus-visible:ring-black hover:bg-transparent hover:text-black lg:w-auto px-6 py-3 text-center text-white"
-                href="https://tally.so/r/m6e6EA"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/dashboard"
               >
-                Join the Waitlist
+                Get Started
               </Link>
 
               {/* <Link
@@ -65,11 +89,11 @@ const Home: NextPage = () => {
                 Explore Synthetic Datasets
               </Link> */}
             </div>
-        </div>
+        
 
         <div>
 
-        <video
+        {/* <video
           src="https://uploads-ssl.webflow.com/62fa8255a7287e714931a2ad/62fa85a47f6f589559851bfc_web_white-transcode.mp4"
           width="100%"
           height="auto"
@@ -78,7 +102,7 @@ const Home: NextPage = () => {
           muted
           playsInline
           className="mt-10"
-      ></video>
+      ></video> */}
         </div>
       </main>
     </div>
