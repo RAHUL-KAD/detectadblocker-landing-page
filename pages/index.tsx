@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2">
       <Head>
-      <title>VoxLab | Enhance AI with Synthetic data </title>
+      <title>Tracker | All in one Tracking </title>
       <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -33,13 +33,13 @@ const Home: NextPage = () => {
             <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-900 sm:text-5xl">
               
             <span className="relative whitespace-nowrap text-[#333]">
-                <span className="relative mr-2">Enhance AI with</span>
+                <span className="relative mr-2">Tracke everything</span>
               </span>
               
             </h1>
 
             <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-[#333] sm:text-5xl sm:mt-2">
-            Synthetic data
+            with a pixel
             </h1>
 
 
