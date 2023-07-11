@@ -89,11 +89,12 @@ const Home: NextPage = () => {
 
               <SignedOut>
                 {/* Render the sign-in button when the user is signed out */}
-                <Link
+                <a
                 className="items-center mt-7 justify-center font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-[#333] border-2 duration-200 focus-visible:ring-black hover:bg-transparent hover:text-black lg:w-auto px-6 py-3 text-center text-white" 
-                href="/dashboard">
+                href="/dashboard"
+                >
                   Get Started
-                </Link>
+                </a>
               </SignedOut>
 
               {/* <Link
