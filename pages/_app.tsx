@@ -28,12 +28,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <>
-      <ClerkProvider {...pageProps}>
       <ErrorBoundary fallback="There was an error while processing">
+      <ClerkProvider {...pageProps}>
       <Component {...pageProps} />
       {/* <Footer /> */}
-      </ErrorBoundary>
       </ClerkProvider>
+      </ErrorBoundary>
     </>
   );
 }
