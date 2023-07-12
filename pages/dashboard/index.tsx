@@ -1,8 +1,28 @@
+"use client";
+
 import { UserButton } from "@clerk/nextjs";
 import Link from 'next/link';
 import Head from "next/head";
+import { useUser } from "@clerk/clerk-react";
+import { useAuth } from '@clerk/clerk-react';
 
 export default function Protect() {
+
+  // Geeting user info after used is signed
+
+  const { isSignedIn, user, isLoaded } = useUser();
+
+  if (!isLoaded) {
+    return null;
+  }
+
+  if (isSignedIn) {
+    console.log("user email is: ", user?.emailAddresses[0].emailAddress)
+    console.log("user id is: ", user?.id)
+    console.log("user name is: ", user?.username)
+  }
+
+
   return (
     <main className="flex flex-col bg-white">
 
