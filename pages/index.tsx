@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           </svg>
           </div>
           <p className="text-sm font-semibold text-[#27a7fc]">
-            Introducing imgai
+            Introducing pixelmark
           </p>
         </a>
 
