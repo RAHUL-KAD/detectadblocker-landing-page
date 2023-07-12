@@ -54,10 +54,10 @@ export default function Protect() {
 
         if (insertError) throw insertError;
 
-        console.log('User added:', userData);
+        // console.log('User added:', userData);
 
       } else {
-        console.log('User already exists:', existingUser[0]);
+        console.log('');
       }
     } catch (error) {
       console.error(error);
