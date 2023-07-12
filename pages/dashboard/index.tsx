@@ -3,25 +3,38 @@
 import { UserButton } from "@clerk/nextjs";
 import Link from 'next/link';
 import Head from "next/head";
-import { useUser } from "@clerk/clerk-react";
-import { useAuth } from '@clerk/clerk-react';
+import { useEffect, useState } from 'react';
+
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { SupabaseClient } from '@supabase/supabase-js';
+
+
+// supabase import from lib
+import { supabase } from "../../lib/supabase";
 
 export default function Protect() {
 
-  // Geeting user info after used is signed
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-  const { isSignedIn, user, isLoaded } = useUser();
+  async function fetchData() {
+    try {
+      const { data: clerkUsers, error } = await supabase
+        .from('clerk-users')
+        .select();
 
-  if (!isLoaded) {
-    return null;
+      if (error) {
+        console.error(error);
+        return;
+      }
+
+      console.log(clerkUsers);
+    } catch (error) {
+      console.error(error);
+    }
   }
-
-  if (isSignedIn) {
-    console.log("user email is: ", user?.emailAddresses[0].emailAddress)
-    console.log("user id is: ", user?.id)
-    console.log("user name is: ", user?.username)
-  }
-
 
   return (
     <main className="flex flex-col bg-white">
