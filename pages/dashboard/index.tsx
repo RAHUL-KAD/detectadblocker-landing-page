@@ -5,9 +5,8 @@ import Link from 'next/link';
 import Head from "next/head";
 import { useEffect, useState } from 'react';
 
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
-import { SupabaseClient } from '@supabase/supabase-js';
+import { useUser } from "@clerk/clerk-react";
+import { v4 as uuidv4 } from 'uuid';
 
 
 // supabase import from lib
@@ -15,22 +14,51 @@ import { supabase } from "../../lib/supabase";
 
 export default function Protect() {
 
+  const { isSignedIn, user, isLoaded } = useUser();
+  const [dataProcessed, setDataProcessed] = useState(false);
+
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (isSignedIn && user && isLoaded && !dataProcessed) {
+      const fullUuid = uuidv4();
+      const uniqueId = fullUuid.split('-')[0]; // Extract the first 8 characters
 
-  async function fetchData() {
+      const user_data = {
+        unique_user_id: uniqueId,
+        user_email: user.emailAddresses[0].emailAddress,
+        user_id: user.id,
+        user_name: user.username
+      };
+
+      checkAndAddUser(user_data);
+      setDataProcessed(true);
+    }
+  }, [isSignedIn, user, isLoaded, dataProcessed]);
+
+  // if (!isLoaded) {
+  //   return null;
+  // }
+
+  async function checkAndAddUser(userData: any) {
     try {
-      const { data: clerkUsers, error } = await supabase
+      const { data: existingUser, error } = await supabase
         .from('clerk-users')
-        .select();
+        .select()
+        .eq('user_email', userData.user_email);
 
-      if (error) {
-        console.error(error);
-        return;
+      if (error) throw error;
+
+      if (!existingUser || existingUser.length === 0) {
+        const { data, error: insertError } = await supabase
+          .from('clerk-users')
+          .insert([userData]);
+
+        if (insertError) throw insertError;
+
+        console.log('User added:', userData);
+
+      } else {
+        console.log('User already exists:', existingUser[0]);
       }
-
-      console.log(clerkUsers);
     } catch (error) {
       console.error(error);
     }
