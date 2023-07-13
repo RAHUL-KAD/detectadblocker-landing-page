@@ -76,7 +76,7 @@ export default function Protect() {
 
           {/* This is a tracking pixel */}
           <img
-                src="https://tinypixel.pythonanywhere.com/pixel.gif?page=pixelmark-Dashboard"
+                src="https://pixel.cyclic.app/pixel.gif?page=pixelmark-Dashboard&user-id=1f734c69"
               style={{ width: '1px', height: '1px' }}
             />
 

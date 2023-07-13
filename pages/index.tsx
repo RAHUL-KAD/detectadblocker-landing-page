@@ -27,7 +27,7 @@ const Home: NextPage = () => {
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-16 mt-10">
           <img
-                src="https://tinypixel.pythonanywhere.com/pixel.gif?page=pixelmark-landing-page"
+                src="https://pixel.cyclic.app/pixel.gif?page=pixelmark-landing-page&user-id=1f734c69"
               style={{ width: '1px', height: '1px' }}
             />
 
