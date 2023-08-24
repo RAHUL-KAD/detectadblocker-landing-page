@@ -9,14 +9,14 @@ export default function Footer() {
                 <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
                     <a href="https://imgai.netlify.app/" className="flex items-center">
-                        <img src="/favicon.ico" className="h-8 mr-3" alt="imgai logo" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">imgai</span>
+                        <img src="/favicon.svg" className="h-8 mr-3" alt="imgai logo" />
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Pixelmark</span>
                     </a>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Tools</h2>
-                        <ul className="text-gray-600 dark:text-gray-400 font-medium">
+                        <ul className="text-gray-600 dark:text-gray-400 font-medium text-right">
                             <li className="mb-4">
                                 <a href="/img-enhancement" className="hover:underline">Image Enhancement</a>
                             </li>

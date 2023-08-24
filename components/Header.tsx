@@ -82,7 +82,7 @@ export default function Header() {
               className="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400"
               href="/blogs"
             >
-              Blogs
+              Blog
             </a>
             
             <a

@@ -4,10 +4,9 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/Header";
-import SquigglyLines from "../components/SquigglyLines";
-import Image from 'next/image';
 import { UserButton, SignedIn, SignedOut } from '@clerk/clerk-react';
 import Track from '../components/Track';
+import Footer from '../components/FooterNew';
 
 
 const Tools = lazy(() => import('../components/Tools'));
@@ -107,6 +106,7 @@ const Home: NextPage = () => {
             </div>
 
           <Track />
+          <Footer />
       </main>
     </div>
   );
