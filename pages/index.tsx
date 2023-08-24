@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
 import Image from 'next/image';
 import { UserButton, SignedIn, SignedOut } from '@clerk/clerk-react';
+import Track from '../components/Track';
 
 
 const Tools = lazy(() => import('../components/Tools'));
@@ -57,7 +58,7 @@ const Home: NextPage = () => {
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
             
           <span className="relative whitespace-nowrap text-[#333]">
-              <span className="relative mr-2">Tracke everything</span>
+              <span className="relative mr-2">Tracke anything</span>
             </span>
             
           </h1>
@@ -72,7 +73,7 @@ const Home: NextPage = () => {
 
 
             <p className="mx-auto sm:mt-5 mt-5 max-w-xl text-lg text-[#333] leading-7">
-             With one pixel you can track anything.
+             With Pixelmark you can track how many users visited your Website, Notion Page, Github Repo, Blog website, and Email.
              </p>
 
             <div className="flex space-x-4">
@@ -93,7 +94,7 @@ const Home: NextPage = () => {
                 className="items-center mt-7 justify-center font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-[#333] border-2 duration-200 focus-visible:ring-black hover:bg-transparent hover:text-black lg:w-auto px-6 py-3 text-center text-white" 
                 href="/dashboard"
                 >
-                  Get Started
+                  Get Started for free
                 </a>
               </SignedOut>
 
@@ -104,21 +105,8 @@ const Home: NextPage = () => {
                 Explore Synthetic Datasets
               </Link> */}
             </div>
-        
 
-        <div>
-
-        {/* <video
-          src="https://uploads-ssl.webflow.com/62fa8255a7287e714931a2ad/62fa85a47f6f589559851bfc_web_white-transcode.mp4"
-          width="100%"
-          height="auto"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="mt-10"
-      ></video> */}
-        </div>
+          <Track />
       </main>
     </div>
   );

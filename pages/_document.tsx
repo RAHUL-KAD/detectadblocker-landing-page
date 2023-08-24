@@ -55,10 +55,10 @@ class MyDocument extends Document {
           />
 
         </Head>
-        <body className="">
+        <body className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')]">
           <Main />
           <NextScript />
-        </body>
+        </body >
       </Html>
     );
   }
