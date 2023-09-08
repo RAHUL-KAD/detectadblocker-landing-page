@@ -37,7 +37,7 @@ export default function Footer() {
               {/* <a href="#" className="mr-4 hover:underline md:mr-6">FAQs</a> */}
           </li>
       </ul>
-      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" className="hover:underline">pixelmark™</a>. All Rights Reserved.</span>
+      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" className="hover:underline">Api4all™</a>. All Rights Reserved.</span>
   </div>
 </footer>
 
