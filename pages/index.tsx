@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2">
       <Head>
-      <title>Api4all | Get started with 5000 Free api calls </title>
+      <title>Api4all | Get started with 10,000 Free api calls </title>
       <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
           <h1 className="mx-auto max-w-4xl flex-wrap font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
             
           <span className="relative whitespace-wrap text-[#333]">
-              <span className="relative mr-2">Get Started with 5000 Free API calls</span>
+              <span className="relative mr-2">Get Started with 10,000 Free API calls</span>
             </span>
             
           </h1>

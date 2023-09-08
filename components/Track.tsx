@@ -15,12 +15,12 @@ export default function Track(){
                     <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
                                             
                         <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Any Landing Page</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">DNS Lookup</h5>
                         </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">With one pixel you can see how many users are visiting your website</p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">The DNS Lookup API retrieves DNS records for any given domain.</p>
                         <a href="/" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-xl border-2 bg-[#333] px-3 py-2 text-center font-medium mt-2 text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black lg:w-auto">
-                            Track Now
+                            Try it
                             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
@@ -30,12 +30,12 @@ export default function Track(){
                     <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
                                             
                         <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Notion Page</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">IP address</h5>
                         </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Now you can monitor your Notion page activity</p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">This API gives you the ip address of a machine</p>
                         <a href="/" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-xl border-2 bg-[#333] px-3 py-2 text-center font-medium mt-2 text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black lg:w-auto">
-                            Track Now
+                            Try it
                             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
@@ -45,12 +45,12 @@ export default function Track(){
                     <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
                                             
                         <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">GitHub Repo</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Browser and OS detection</h5>
                         </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Now you can monitor your Notion page activity</p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">This API detects browser and os from a user agent.</p>
                         <a href="/" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-xl border-2 bg-[#333] px-3 py-2 text-center font-medium mt-2 text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black lg:w-auto">
-                            Track Now
+                            Try it
                             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
@@ -66,12 +66,12 @@ export default function Track(){
                     <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
                                                 
                         <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Blogs</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Youtube Metadata</h5>
                         </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Check how many people actually read your blogs.</p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">This API gives you metadata of youtube</p>
                         <a href="/" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-xl border-2 bg-[#333] px-3 py-2 text-center font-medium mt-2 text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black lg:w-auto">
-                            Track Now
+                            Try it
                             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
@@ -81,27 +81,27 @@ export default function Track(){
                     <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
                                                 
                         <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personal Website</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Random Color Generation</h5>
                         </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Now you can check if someone visited your profile or not</p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Each time you make a api request it will return you a random color value.</p>
                         <a href="/" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-xl border-2 bg-[#333] px-3 py-2 text-center font-medium mt-2 text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black lg:w-auto">
-                            Track Now
+                            Try it
                             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
                     </div>
 
-                    <div className="max-w-sm p-6 bg-[#fff9f9] border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
                                                 
                         <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Custom Page</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Email Validation & Verification</h5>
                         </a>
                         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">You can keep track of any page just with a pixel.</p>
                         <a href="/" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-xl border-2 bg-[#333] px-3 py-2 text-center font-medium mt-2 text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black lg:w-auto">
-                            Track Now
+                            Try it
                             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
