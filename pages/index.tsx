@@ -53,21 +53,13 @@ const Home: NextPage = () => {
           </p>
         </a>
 
-          <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
+          <h1 className="mx-auto max-w-4xl flex-wrap font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
             
-          <span className="relative whitespace-nowrap text-[#333]">
-              <span className="relative mr-2">Get Started with</span>
+          <span className="relative whitespace-wrap text-[#333]">
+              <span className="relative mr-2">Get Started with 5000 Free API calls</span>
             </span>
             
           </h1>
-
-          <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
-            
-            <span className="relative whitespace-nowrap text-[#333]">
-                <span className="relative mr-2">5000 Free API calls</span>
-              </span>
-              
-            </h1>
 
 
             <p className="mx-auto sm:mt-5 mt-5 max-w-xl text-lg text-[#333] leading-7">
