@@ -19,12 +19,12 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2">
       <Head>
-      <title>pixelmark | All in one Tracking </title>
+      <title>Api4all | Get started with 5000 Free api calls </title>
       <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-16 mt-10">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-12 mt-10">
           <img
                 src="https://pixel.cyclic.app/pixel.gif?page=pixelmark-landing-page&user-id=1f734c69"
               style={{ width: '1px', height: '1px' }}
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           href="https://twitter.com/rahul_jalindar/status/1674156276920483840"
           target="_blank"
           rel="noreferrer"
-          className="mx-auto sm:mb-10 mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
+          className="mx-auto sm:mb-5 mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
           <div>
           <svg
@@ -49,14 +49,14 @@ const Home: NextPage = () => {
           </svg>
           </div>
           <p className="text-sm font-semibold text-[#27a7fc]">
-            Introducing pixelmark
+            Introducing Api4all
           </p>
         </a>
 
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
             
           <span className="relative whitespace-nowrap text-[#333]">
-              <span className="relative mr-2">Tracke anything</span>
+              <span className="relative mr-2">Get Started with</span>
             </span>
             
           </h1>
@@ -64,14 +64,14 @@ const Home: NextPage = () => {
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
             
             <span className="relative whitespace-nowrap text-[#333]">
-                <span className="relative mr-2">with a Pixel</span>
+                <span className="relative mr-2">5000 Free API calls</span>
               </span>
               
             </h1>
 
 
             <p className="mx-auto sm:mt-5 mt-5 max-w-xl text-lg text-[#333] leading-7">
-             With Pixelmark you can track how many users visited your Website, Notion Page, Github Repo, Blog website, and Email.
+             Api4all provides free api's for developers. We have wide range of api categories from Social Media to 
              </p>
 
             <div className="flex space-x-4">
