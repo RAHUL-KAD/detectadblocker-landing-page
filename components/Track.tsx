@@ -43,11 +43,11 @@ export default function Track(){
                     </div>
 
                     <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
-                                            
+                                                
                         <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Browser and OS detection</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Email Validation & Verification</h5>
                         </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">This API detects browser and os from a user agent.</p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">You can keep track of any page just with a pixel.</p>
                         <a href="/" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-xl border-2 bg-[#333] px-3 py-2 text-center font-medium mt-2 text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black lg:w-auto">
                             Try it
@@ -94,11 +94,11 @@ export default function Track(){
                     </div>
 
                     <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
-                                                
+                                            
                         <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Email Validation & Verification</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Browser and OS detection</h5>
                         </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">You can keep track of any page just with a pixel.</p>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">This API detects browser and os from a user agent.</p>
                         <a href="/" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-xl border-2 bg-[#333] px-3 py-2 text-center font-medium mt-2 text-white duration-200 hover:border-black hover:bg-transparent hover:text-black focus:outline-none focus-visible:outline-black focus-visible:ring-black lg:w-auto">
                             Try it
