@@ -72,21 +72,21 @@ export default function Header() {
           >
             <a
               className="px-2 lg:px-6 py-2 md:px-3 text-lg font-medium text-black hover:text-accent-400 lg:ml-auto"
-              href=""
+              href="#api"
             >
               API's
             </a>
             
             <a
               className="px-2 lg:px-6 py-2 md:px-3 text-lg font-medium text-black hover:text-accent-400"
-              href="/blogs"
+              href=""
             >
               Documentation
             </a>
             
             <a
               className="px-2 lg:px-6 py-2 md:px-3 text-lg font-medium text-black hover:text-accent-400"
-              href="https://rahul-kadam.notion.site/pixelmark-Changlog-0b031609309648948cf8bfd29f475084"
+              // href="https://rahul-kadam.notion.site/pixelmark-Changlog-0b031609309648948cf8bfd29f475084"
               target="_blank" rel="noopener noreferrer"
             >
               Blog
@@ -94,7 +94,7 @@ export default function Header() {
 
             <a
               className="px-2 lg:px-6 py-2 md:px-3 text-lg font-medium text-black hover:text-accent-400"
-              href="https://rahul-kadam.notion.site/pixelmark-Changlog-0b031609309648948cf8bfd29f475084"
+              // href="https://rahul-kadam.notion.site/pixelmark-Changlog-0b031609309648948cf8bfd29f475084"
               target="_blank" rel="noopener noreferrer"
             >
               Pricing

@@ -14,19 +14,19 @@ export default function Footer() {
               width={8}
               height={8}
           />
-          Pixelmark    
+          Api4all    
       </a>
       {/* <p className="my-6 text-gray-500 dark:text-gray-400">Generate high quality datasets for Computer Vision, ASR, Virtual assistants, Chatbots, and content creation.</p> */}
       <ul className="flex flex-wrap justify-center items-center mt-5 mb-6 text-[#333] dark:text-white">
           <li>
-              <a href="#solutions" className="mr-4 hover:underline md:mr-6 ">Tutorials</a>
+              <a href="#api" className="mr-4 hover:underline md:mr-6 ">API's</a>
           </li>
           <li>
-              <a href="#datasets" className="mr-4 hover:underline md:mr-6">Blog</a>
+              <a href="#" className="mr-4 hover:underline md:mr-6">Documentations</a>
           </li>
-          {/* <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6 ">Campaigns</a>
-          </li> */}
+          <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6 ">Blog</a>
+          </li>
           <li>
               <a href="#" className="mr-4 hover:underline md:mr-6">Changlog</a>
           </li>
