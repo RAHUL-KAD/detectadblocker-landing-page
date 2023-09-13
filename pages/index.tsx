@@ -25,10 +25,6 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-12 mt-10">
-          <img
-                src="https://pixel.cyclic.app/pixel.gif?page=pixelmark-landing-page&user-id=1f734c69"
-              style={{ width: '1px', height: '1px' }}
-            />
 
         <a
           href="https://twitter.com/rahul_jalindar/status/1674156276920483840"
