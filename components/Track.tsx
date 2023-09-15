@@ -35,7 +35,7 @@ export default function Track(){
         .then((response) => response.json())
         .then((data) => {
           setApiResponse(data);
-          console.log(data);
+        //   console.log(data);
         })
         .catch((error) => {
           console.error('API Request Error:', error);
@@ -45,6 +45,27 @@ export default function Track(){
       // Extract device-type and os-name from the API response
     const deviceType = apiResponse?.device?.type || 'Unknown';
     const osName = apiResponse?.os?.name || 'Unknown';
+
+
+    // detect if cookies are disabled or not
+    const [cookieSupport, setCookieSupport] = useState<boolean | null>(null);
+
+    useEffect(() => {
+      const testCookieName = 'testCookie';
+  
+      // Try to set a test cookie
+      document.cookie = `${testCookieName}=1`;
+  
+      // Check if the test cookie was successfully set
+      const cookieExists = document.cookie.indexOf(testCookieName) !== -1;
+  
+      // Delete the test cookie
+      document.cookie = `${testCookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC`;
+  
+      // Set the cookie support state
+      setCookieSupport(cookieExists);
+    });
+
 
     return (
         <section
@@ -65,41 +86,49 @@ export default function Track(){
                         <div className="">
                             <h2 className="text-xl  mb-1 font-semibold ">{message}</h2>
                         </div>
+
+                        <div>
+                            {cookieSupport ? (
+                                <p className='text-xl  mb-1 font-semibold'>Cookies are supported in this browser.</p>
+                            ) : (
+                                <p className='text-xl  mb-1 font-semibold'>Cookies are not supported in this browser.</p>
+                            )}
+                        </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
 
-                    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-xl dark:bg-gray-800 dark:border-gray-700">
-                                            
-                        <a>
-                            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Device Type</h5>
-                        </a>
-                        <div>
-                            {apiResponse && (
-                                <p>{deviceType}</p>
-                            )}
+                        <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-xl dark:bg-gray-800 dark:border-gray-700">
+                                                
+                            <a>
+                                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Device Type</h5>
+                            </a>
+                            <div>
+                                {apiResponse && (
+                                    <p>{deviceType}</p>
+                                )}
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-xl  dark:bg-gray-800 dark:border-gray-700">
-                                            
-                        <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">OS</h5>
-                        </a>
-                        <div>
-                            {apiResponse && (
-                                <p>{osName}</p>
-                            )}
+                        <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-xl  dark:bg-gray-800 dark:border-gray-700">
+                                                
+                            <a>
+                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">OS</h5>
+                            </a>
+                            <div>
+                                {apiResponse && (
+                                    <p>{osName}</p>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-xl dark:bg-gray-800 dark:border-gray-700">
                         
-                        <a>
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Location</h5>
-                        </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">India</p>
-                        
-                    </div>
-                    
+                        <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-xl dark:bg-gray-800 dark:border-gray-700">
+                            
+                            <a>
+                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Location</h5>
+                            </a>
+                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">India</p>
+                            
+                        </div>
 
                 </div>
                     </div>
