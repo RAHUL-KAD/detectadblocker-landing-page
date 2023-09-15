@@ -28,7 +28,7 @@ export default function Header() {
               height={25}
           />
             <h1 className="sm:text-3xl text-2xl font-bold  tracking-tight">
-            Detectadblocker &nbsp;
+            Detect ad blocker &nbsp;
             <sup >
               <small className="text-base"></small>
             </sup>

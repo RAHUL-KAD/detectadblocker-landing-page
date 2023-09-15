@@ -69,7 +69,7 @@ export default function Protect() {
     <main className="flex flex-col">
 
         <Head>
-            <title>Dashboard | Detectadblocker </title>
+            <title>Dashboard | Detect ad blocker </title>
             <link rel="icon" href="/favicon.svg" />
         </Head>
       <header>

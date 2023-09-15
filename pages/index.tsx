@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2">
       <Head>
-      <title>Detectadblocker | Advanced Ad Blocker Detection and User Profiling </title>
+      <title>Detect ad blocker | Advanced Ad Blocker Detection and User Profiling </title>
       <link rel="icon" href="/favicon.ico" />
       </Head>
 
