@@ -3,32 +3,27 @@ import React, { useEffect, useState } from 'react';
 
 export default function Track(){
 
-    // This is to get the user device and other info
-    const [userAgent, setUserAgent] = useState<string>('');
-    const [apiResponse, setApiResponse] = useState<any | null>(null); // Type `any` can be improved based on the API response structure
-  
+    const [userAgent, setUserAgent] = useState('');
+    const [deviceType, setDeviceType] = useState('Unknown');
+    const [osName, setOsName] = useState('Unknown');
+
     useEffect(() => {
-      const userAgentString: string = window.navigator.userAgent;
-      setUserAgent(userAgentString);
-  
-      // Create the URL with the user agent
-      const apiUrl = `https://api.apicagent.com/?ua=${encodeURIComponent(userAgentString)}`;
-  
-      // Make a GET request to the API
-      fetch(apiUrl)
+        // Get the user agent string
+        const userAgentString = window.navigator.userAgent;
+        setUserAgent(userAgentString);
+
+        // Make a request to your Express API using node-fetch
+        fetch(`https://fine-gray-horse-tux.cyclic.app/getDeviceInfo?ua=${encodeURIComponent(userAgentString)}`)
         .then((response) => response.json())
         .then((data) => {
-          setApiResponse(data);
-        //   console.log(data);
+            const { deviceType, osName } = data;
+            setDeviceType(deviceType);
+            setOsName(osName);
         })
         .catch((error) => {
-          console.error('API Request Error:', error);
+            console.error('API Request Error:', error);
         });
     }, []);
-
-      // Extract device-type and os-name from the API response
-    const deviceType = apiResponse?.device?.type || 'Unknown';
-    const osName = apiResponse?.os?.name || 'Unknown';
 
 
     // detect if cookies are disabled or not
@@ -130,9 +125,9 @@ export default function Track(){
                                 <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Device Type</h5>
                             </a>
                             <div>
-                                {apiResponse && (
+                                
                                     <p>{deviceType}</p>
-                                )}
+                                
                             </div>
                         </div>
 
@@ -142,9 +137,9 @@ export default function Track(){
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">OS</h5>
                             </a>
                             <div>
-                                {apiResponse && (
+                                
                                     <p>{osName}</p>
-                                )}
+                                
                             </div>
                         </div>
                         
