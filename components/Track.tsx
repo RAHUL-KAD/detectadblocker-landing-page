@@ -6,6 +6,7 @@ export default function Track(){
     const [userAgent, setUserAgent] = useState('');
     const [deviceType, setDeviceType] = useState('Unknown');
     const [osName, setOsName] = useState('Unknown');
+    const [country, setCountry] = useState('Unknown'); // Add state for country
 
     useEffect(() => {
         // Get the user agent string
@@ -16,9 +17,11 @@ export default function Track(){
         fetch(`https://fine-gray-horse-tux.cyclic.app/getDeviceInfo?ua=${encodeURIComponent(userAgentString)}`)
         .then((response) => response.json())
         .then((data) => {
-            const { deviceType, osName } = data;
+            const { deviceType, osName, country } = data;
             setDeviceType(deviceType);
             setOsName(osName);
+            setCountry(country); // Set the country state
+            console.log(data)
         })
         .catch((error) => {
             console.error('API Request Error:', error);
@@ -148,8 +151,11 @@ export default function Track(){
                             <a>
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Location</h5>
                             </a>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">India</p>
-                            
+                            <div>
+                                
+                                    <p>{country}</p>
+                                
+                            </div>
                         </div>
 
                     </div>
