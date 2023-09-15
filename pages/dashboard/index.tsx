@@ -42,7 +42,7 @@ export default function Protect() {
   async function checkAndAddUser(userData: any) {
     try {
       const { data: existingUser, error } = await supabase
-        .from('clerk-users')
+        .from('detectadblocker-clerk-users')
         .select()
         .eq('user_email', userData.user_email);
 
