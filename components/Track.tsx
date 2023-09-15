@@ -3,22 +3,6 @@ import React, { useEffect, useState } from 'react';
 
 export default function Track(){
 
-    const [message, setMessage] = useState('');
-  
-    async function checkAdBlocker() {
-      try {
-        await fetch("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' });
-        setMessage('Adblocker is not detected.');
-      } catch (error) {
-        console.log(error);
-        setMessage('Adblocker is detected.');
-      }
-    }
-  
-    useEffect(() => {
-      checkAdBlocker();
-    }, []);
-
     // This is to get the user device and other info
     const [userAgent, setUserAgent] = useState<string>('');
     const [apiResponse, setApiResponse] = useState<any | null>(null); // Type `any` can be improved based on the API response structure
@@ -118,14 +102,8 @@ export default function Track(){
                     </h1>
                 </div>
 
-                
-
                 <div className="flex-1 overflow-hidden mt-5">
                     <div className="bg-white w-full p-6 rounded-md border-2 border-gray-200">
-                        <div className="">
-                            {/* <h2 className="text-xl  mb-1 font-semibold ">{message}</h2> */}
-                        </div>
-
                         
                         <div>
                         {adsBlocked ? (
@@ -179,9 +157,8 @@ export default function Track(){
                             
                         </div>
 
-                </div>
                     </div>
-
+                </div>
                     
                 </div>
             </div>
