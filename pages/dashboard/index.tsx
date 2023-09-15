@@ -50,7 +50,7 @@ export default function Protect() {
 
       if (!existingUser || existingUser.length === 0) {
         const { data, error: insertError } = await supabase
-          .from('clerk-users')
+          .from('detectadblocker-clerk-users')
           .insert([userData]);
 
         if (insertError) throw insertError;
