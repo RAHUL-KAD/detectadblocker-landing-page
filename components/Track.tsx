@@ -66,6 +66,45 @@ export default function Track(){
       setCookieSupport(cookieExists);
     });
 
+    const [adsBlocked, setAdsBlocked] = useState(false);
+
+    useEffect(() => {
+        const detectAdBlock = async () => {
+        const urls = [
+            'https://pagead2.googlesyndication.com/pagead/show_ads.js',
+            'https://googleads.g.doubleclick.net/pagead/id',
+            'https://static.doubleclick.net/instream/ad_status.js',
+            'https://imasdk.googleapis.com/js/sdkloader/ima3.js',
+            'https://static.ads-twitter.com/uwt.js',
+            '||us-u.openx.net^',
+            '||pagead2.googlesyndication.com^*/pagead/js/*/show_ads_impl.js',
+            '||pagead2.googlesyndication.com^*/pagead/osd.js',
+            '||adserver.adtechus.com^*/adiframe/*',
+            '||bid.g.doubleclick.net^*/adview?',
+            '||googleads.g.doubleclick.net^*/pagead/ads?',
+            '||googleads.g.doubleclick.net^*/pagead/lvz?',
+        ];
+
+        for (let i = 0; i < urls.length; i++) {
+            setAdsBlocked(false);
+            const url = urls[i];
+            try {
+            await fetch(new Request(url), { mode: 'no-cors' }).catch((error) => {
+                // no-cors mode doesn't allow you to have response data, but we don't need it for adblock detection
+                setAdsBlocked(true);
+            });
+            } catch (e) {
+            setAdsBlocked(true);
+            }
+            if (adsBlocked) {
+            // Adblock detected
+            return;
+            }
+        }
+        };
+
+        detectAdBlock();
+    }, []);
 
     return (
         <section
@@ -84,7 +123,16 @@ export default function Track(){
                 <div className="flex-1 overflow-hidden mt-5">
                     <div className="bg-white w-full p-6 rounded-md border-2 border-gray-200">
                         <div className="">
-                            <h2 className="text-xl  mb-1 font-semibold ">{message}</h2>
+                            {/* <h2 className="text-xl  mb-1 font-semibold ">{message}</h2> */}
+                        </div>
+
+                        
+                        <div>
+                        {adsBlocked ? (
+                            <p className='text-xl  mb-1 font-semibold'>Ads are disabled.</p>
+                        ) : (
+                            <p className='text-xl  mb-1 font-semibold'>Ads are not disabled.</p>
+                        )}
                         </div>
 
                         <div>
@@ -95,6 +143,7 @@ export default function Track(){
                             )}
                         </div>
 
+                        
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
 
                         <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-xl dark:bg-gray-800 dark:border-gray-700">
