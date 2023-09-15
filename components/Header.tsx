@@ -23,11 +23,11 @@ export default function Header() {
             <Image
               alt="header text"
               src="/favicon.svg"
-              className="sm:w-12 sm:h-12 w-10 h-10"
+              className="sm:w-15 sm:h-10 w-8 h-10"
               width={25}
               height={25}
           />
-            <h1 className="sm:text-4xl text-4xl font-bold  tracking-tight">
+            <h1 className="sm:text-3xl text-2xl font-bold  tracking-tight">
             Detectadblocker &nbsp;
             <sup >
               <small className="text-base"></small>
