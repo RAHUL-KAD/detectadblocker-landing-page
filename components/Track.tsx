@@ -21,7 +21,7 @@ export default function Track(){
             setDeviceType(deviceType);
             setOsName(osName);
             setCountry(country); // Set the country state
-            console.log(data)
+            // console.log(data)
         })
         .catch((error) => {
             console.error('API Request Error:', error);
