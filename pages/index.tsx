@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2">
       <Head>
-      <title>Api4all | Get started with 10,000 Free api calls </title>
+      <title>Detectadblocker | Advanced Ad Blocker Detection and User Profiling </title>
       <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -46,21 +46,21 @@ const Home: NextPage = () => {
           </svg>
           </div>
           <p className="text-sm font-semibold text-[#27a7fc]">
-            Introducing Api4all
+            Introducing Detectadblocker
           </p>
         </a>
 
           <h1 className="mx-auto max-w-4xl flex-wrap font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
             
           <span className="relative whitespace-wrap text-[#333]">
-              <span className="relative mr-2">Get Started with 10,000 Free API calls</span>
+              <span className="relative mr-2">Ad Blocker Detection with User Profiling</span>
             </span>
             
           </h1>
 
 
             <p className="mx-auto sm:mt-5 mt-5 max-w-xl text-lg text-[#333] leading-7">
-             Api4all provides free api's for developers. We have wide range of api categories from Social Media to 
+            Precision ad-blocker detection, extracting vital user data for deeper insights into location, device, browser, and more
              </p>
 
             <div className="flex space-x-4">
