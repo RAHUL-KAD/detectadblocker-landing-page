@@ -42,7 +42,7 @@ export default function Protect() {
   async function checkAndAddUser(userData: any) {
     try {
       const { data: existingUser, error } = await supabase
-        .from('detectadblocker-clerk-users')
+        .from('clerk-users')
         .select()
         .eq('user_email', userData.user_email);
 
@@ -50,7 +50,7 @@ export default function Protect() {
 
       if (!existingUser || existingUser.length === 0) {
         const { data, error: insertError } = await supabase
-          .from('detectadblocker-clerk-users')
+          .from('clerk-users')
           .insert([userData]);
 
         if (insertError) throw insertError;
@@ -69,7 +69,7 @@ export default function Protect() {
     <main className="flex flex-col">
 
         <Head>
-            <title>Dashboard | pixelmark </title>
+            <title>Dashboard | Detectadblocker </title>
             <link rel="icon" href="/favicon.svg" />
         </Head>
       <header>
@@ -90,7 +90,7 @@ export default function Protect() {
                   <li>
                     <Link
                       className="text-gray-900 text-2xl font-bold transition hover:text-gray-500/75"
-                      href="/">Api4all</Link>
+                      href="/">Detectadblocker</Link>
                   </li>
                   <li>
                     <Link

@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Track from '../components/Track';
 import Footer from '../components/FooterNew';
 
+import { UserButton, SignedIn, SignedOut } from '@clerk/clerk-react';
 
 const Tools = lazy(() => import('../components/Tools'));
 
@@ -63,12 +64,25 @@ const Home: NextPage = () => {
              </p>
 
             <div className="flex space-x-4">
-              <a
-              className="items-center mt-7 justify-center font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-[#333] border-2 duration-200 focus-visible:ring-black hover:bg-transparent hover:text-black lg:w-auto px-6 py-3 text-center text-white" 
-              href="/dashboard"
-              >
-                Get Started for free
-              </a>
+              <SignedIn>
+                  {/* Render the dashboard button when the user is signed in */}
+                  <Link
+                    className="items-center mt-7 justify-center font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-[#333] border-2 duration-200 focus-visible:ring-black hover:bg-transparent hover:text-black lg:w-auto px-6 py-3 text-center text-white"
+                    href="/dashboard"
+                  >
+                    Go to Dashboard
+                  </Link>
+                </SignedIn>
+
+                <SignedOut>
+                  {/* Render the sign-in button when the user is signed out */}
+                  <a
+                  className="items-center mt-7 justify-center font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-[#333] border-2 duration-200 focus-visible:ring-black hover:bg-transparent hover:text-black lg:w-auto px-6 py-3 text-center text-white" 
+                  href="/dashboard"
+                  >
+                    Get Started for free
+                  </a>
+                </SignedOut>
 
               {/* <Link
                 className="items-center mt-7 justify-center font-medium rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-[#6a32ee] border-2 duration-200 focus-visible:ring-black hover:bg-transparent hover:border-black hover:text-black lg:w-auto px-6 py-3 text-center text-white"
