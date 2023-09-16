@@ -3,32 +3,6 @@ import React, { useEffect, useState } from 'react';
 
 export default function Track(){
 
-    const [userAgent, setUserAgent] = useState('');
-    const [deviceType, setDeviceType] = useState('Unknown');
-    const [osName, setOsName] = useState('Unknown');
-    const [country, setCountry] = useState('Unknown'); // Add state for country
-
-    useEffect(() => {
-        // Get the user agent string
-        const userAgentString = window.navigator.userAgent;
-        setUserAgent(userAgentString);
-
-        // Make a request to your Express API using node-fetch
-        fetch(`https://fine-gray-horse-tux.cyclic.app/getDeviceInfo`)
-        .then((response) => response.json())
-        .then((data) => {
-            const { deviceType, osName, country } = data;
-            setDeviceType(deviceType);
-            setOsName(osName);
-            setCountry(country); // Set the country state
-            // console.log(data)
-        })
-        .catch((error) => {
-            console.error('API Request Error:', error);
-        });
-    }, []);
-
-
     // detect if cookies are disabled or not
     const [cookieSupport, setCookieSupport] = useState<boolean | null>(null);
 
@@ -49,6 +23,7 @@ export default function Track(){
     });
 
     const [adsBlocked, setAdsBlocked] = useState(false);
+    const [adblockDetectionComplete, setAdblockDetectionComplete] = useState(false);
 
     useEffect(() => {
         const detectAdBlock = async () => {
@@ -59,26 +34,58 @@ export default function Track(){
             '||adserver.adtechus.com^*/adiframe/*', '||bid.g.doubleclick.net^*/adview?', '||googleads.g.doubleclick.net^*/pagead/ads?', '||googleads.g.doubleclick.net^*/pagead/lvz?',
         ];
 
-        for (let i = 0; i < urls.length; i++) {
-            setAdsBlocked(false);
-            const url = urls[i];
-            try {
-            await fetch(new Request(url), { mode: 'no-cors' }).catch((error) => {
-                // no-cors mode doesn't allow you to have response data, but we don't need it for adblock detection
-                setAdsBlocked(true);
-            });
-            } catch (e) {
-            setAdsBlocked(true);
-            }
-            if (adsBlocked) {
-            // Adblock detected
-            return;
-            }
-        }
-        };
+            let blocked = false;
+
+                for (let i = 0; i < urls.length; i++) {
+                    const url = urls[i];
+                    try {
+                        await fetch(new Request(url), { mode: 'no-cors' });
+                    } catch (e) {
+                        blocked = true;
+                        break; // Exit the loop early if adblock is detected
+                    }
+                }
+
+                setAdsBlocked(blocked);
+                setAdblockDetectionComplete(true);
+            };
 
         detectAdBlock();
     }, []);
+
+    const [deviceType, setDeviceType] = useState('Unknown');
+    const [osName, setOsName] = useState('Unknown');
+    const [country, setCountry] = useState('Unknown'); // Add state for country
+
+    useEffect(() => {
+        if (adblockDetectionComplete) {
+            // Define the query parameters for adblock and cookies
+            console.log('adblocked', adsBlocked);
+            console.log('cookie', cookieSupport);
+            const queryParams = new URLSearchParams({
+                adblock: adsBlocked.toString(),
+                cookies: cookieSupport !== null ? cookieSupport.toString() : 'false',
+            });
+
+            // Create the URL with query parameters
+            const apiUrl = `https://fine-gray-horse-tux.cyclic.app/getDeviceInfo?${queryParams.toString()}`;
+
+            // Make a request to your Express API using node-fetch
+            fetch(apiUrl)
+                .then((response) => response.json())
+                .then((data) => {
+                    const { deviceType, osName, country } = data;
+                    setDeviceType(deviceType);
+                    setOsName(osName);
+                    setCountry(country); // Set the country state
+                    console.log(data);
+                })
+                .catch((error) => {
+                    console.error('API Request Error:', error);
+                });
+        }
+    }, [adsBlocked, adblockDetectionComplete]);
+
 
     return (
         <section
