@@ -56,6 +56,8 @@ export default function Track(){
     const [deviceType, setDeviceType] = useState('Unknown');
     const [osName, setOsName] = useState('Unknown');
     const [country, setCountry] = useState('Unknown'); // Add state for country
+    const [city, setCity] = useState('Unknown');
+    const [region, setRegion] = useState('Unknown');
 
     useEffect(() => {
         if (adblockDetectionComplete) {
@@ -80,10 +82,12 @@ export default function Track(){
             fetch(apiUrl)
                 .then((response) => response.json())
                 .then((data) => {
-                    const { deviceType, osName, country } = data;
+                    const { deviceType, osName, country, city, region } = data;
                     setDeviceType(deviceType);
                     setOsName(osName);
                     setCountry(country); // Set the country state
+                    setCity(city);
+                    setRegion(region);
                     console.log(data);
                 })
                 .catch((error) => {
@@ -158,7 +162,7 @@ export default function Track(){
                             </a>
                             <div>
                                 
-                                    <p>{country}</p>
+                                    <p>{city}, {region}, {country}</p>
                                 
                             </div>
                         </div>
