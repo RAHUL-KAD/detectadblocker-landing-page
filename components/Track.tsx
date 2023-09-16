@@ -62,10 +62,16 @@ export default function Track(){
             // Define the query parameters for adblock and cookies
             console.log('adblocked', adsBlocked);
             console.log('cookie', cookieSupport);
-            const queryParams = new URLSearchParams({
-                adblock: adsBlocked.toString(),
-                cookies: cookieSupport !== null ? cookieSupport.toString() : 'false',
-            });
+
+            
+            const queryParams = new URLSearchParams();
+            queryParams.append('adblock', adsBlocked.toString());
+            queryParams.append('cookies', cookieSupport !== null ? cookieSupport.toString() : 'false');
+            const apiKey = process.env.NEXT_PUBLIC_DETECT_AD_BLOCKER_API_KEY
+            if (apiKey) {
+              queryParams.append('apiKey', apiKey);
+            }
+
 
             // Create the URL with query parameters
             const apiUrl = `https://fine-gray-horse-tux.cyclic.app/getDeviceInfo?${queryParams.toString()}`;
