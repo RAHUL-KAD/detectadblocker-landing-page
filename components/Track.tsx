@@ -14,7 +14,7 @@ export default function Track(){
         setUserAgent(userAgentString);
 
         // Make a request to your Express API using node-fetch
-        fetch(`https://fine-gray-horse-tux.cyclic.app/getDeviceInfo?ua=${encodeURIComponent(userAgentString)}`)
+        fetch(`https://fine-gray-horse-tux.cyclic.app/getDeviceInfo`)
         .then((response) => response.json())
         .then((data) => {
             const { deviceType, osName, country } = data;
@@ -53,18 +53,10 @@ export default function Track(){
     useEffect(() => {
         const detectAdBlock = async () => {
         const urls = [
-            'https://pagead2.googlesyndication.com/pagead/show_ads.js',
-            'https://googleads.g.doubleclick.net/pagead/id',
-            'https://static.doubleclick.net/instream/ad_status.js',
-            'https://imasdk.googleapis.com/js/sdkloader/ima3.js',
-            'https://static.ads-twitter.com/uwt.js',
-            '||us-u.openx.net^',
-            '||pagead2.googlesyndication.com^*/pagead/js/*/show_ads_impl.js',
-            '||pagead2.googlesyndication.com^*/pagead/osd.js',
-            '||adserver.adtechus.com^*/adiframe/*',
-            '||bid.g.doubleclick.net^*/adview?',
-            '||googleads.g.doubleclick.net^*/pagead/ads?',
-            '||googleads.g.doubleclick.net^*/pagead/lvz?',
+            'https://pagead2.googlesyndication.com/pagead/show_ads.js', 'https://googleads.g.doubleclick.net/pagead/id', 'https://static.doubleclick.net/instream/ad_status.js',
+            'https://imasdk.googleapis.com/js/sdkloader/ima3.js', 'https://static.ads-twitter.com/uwt.js', '||us-u.openx.net^',
+            '||pagead2.googlesyndication.com^*/pagead/js/*/show_ads_impl.js', '||pagead2.googlesyndication.com^*/pagead/osd.js',
+            '||adserver.adtechus.com^*/adiframe/*', '||bid.g.doubleclick.net^*/adview?', '||googleads.g.doubleclick.net^*/pagead/ads?', '||googleads.g.doubleclick.net^*/pagead/lvz?',
         ];
 
         for (let i = 0; i < urls.length; i++) {
