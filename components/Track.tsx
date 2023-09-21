@@ -76,7 +76,7 @@ export default function Track(){
 
 
             // Create the URL with query parameters
-            const apiUrl = `https://fine-gray-horse-tux.cyclic.app/getDeviceInfo?${queryParams.toString()}`;
+            const apiUrl = `https://v1.apiforall.xyz/getDeviceInfo?${queryParams.toString()}`;
 
             // Make a request to your Express API using node-fetch
             fetch(apiUrl)
